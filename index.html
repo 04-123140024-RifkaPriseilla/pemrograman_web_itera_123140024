@@ -1,0 +1,59 @@
+
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Aplikasi Manajemen Tugas Mahasiswa</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Aplikasi Manajemen Tugas Mahasiswa</h1>
+        <p class="description">Aplikasi manajemen tugas kuliah mahasiswa untuk membantu manajemen tugas kuliah.</p>
+
+        <form id="taskForm" autocomplete="off">
+            <div class="form-group">
+                <label>Nama Tugas</label>
+                <input type="text" id="taskName" placeholder="Masukkan nama tugas">
+                <small class="error" id="nameError"></small>
+            </div>
+            <div class="form-group">
+                <label>Mata Kuliah</label>
+                <input type="text" id="subject" placeholder="Masukkan nama mata kuliah">
+                <small class="error" id="subjectError"></small>
+            </div>
+            <div class="form-group">
+                <label>Deadline</label>
+                <input type="date" id="deadline">
+                <small class="error" id="deadlineError"></small>
+            </div>
+            <button type="submit" class="btn">Tambah Tugas</button>
+        </form>
+
+        <div class="task-stats">
+            <p><strong>Tugas Belum Selesai:</strong> <span id="incompleteCount">0</span></p>
+            <input type="text" id="search" placeholder="Cari tugas atau mata kuliah...">
+        </div>
+
+        <div class="filter-buttons">
+            <button class="filter-btn active" data-filter="all">Semua</button>
+            <button class="filter-btn" data-filter="completed">Selesai</button>
+            <button class="filter-btn" data-filter="incomplete">Belum Selesai</button>
+        </div>
+
+        <ul id="taskList"></ul>
+
+        <div class="guide">
+            <h2>Langkah Penggunaan</h2>
+            <ol>
+                <li>Isi form tugas (nama, mata kuliah, deadline).</li>
+                <li>Klik “Tambah Tugas”.</li>
+                <li>Tugas akan muncul di daftar bawah.</li>
+                <li>Gunakan tombol edit, hapus, atau tandai selesai.</li>
+            </ol>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
